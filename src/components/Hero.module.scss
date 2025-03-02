@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'sam';
+    src: url('../fonts/SAMAN___.TTF') format('truetype'),
+      
+  
+  }
+
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+    // background-image: url('../media/hero-image.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: 50% 100%;
+
+    .hero-bg {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        min-height: 100%;
+        min-width: 100%;
+    }
+
+    .content {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        .logo {
+            text-transform: uppercase;
+            font-family: 'sam';
+            font-weight: 400;
+            font-size: 10rem;
+            color: #FCDE70;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+
+            >span {
+                will-change: transform;
+            }
+
+            >span:last-child {
+                margin-right: 0;
+            }
+
+            @media screen and (max-width: 699px) {
+                font-size: 5rem;
+            }
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            padding: 8rem 1rem; /* Default padding */
+            bottom: 0;
+            width: 100%;
+            margin: auto;
+            font-family: "Antonio";
+            font-size: 1.8rem;
+            color: #ddd;
+            text-shadow: 0 1px 0 #3335;
+            font-weight: 600;
+            align-items: center;
+        }
+        
+        /* For small screens (phones) */
+        @media (max-width: 600px) {
+            .timeline {
+                padding: 4rem 0.5rem; /* Less padding for small screens */
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* For medium screens (tablets) */
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .timeline {
+                padding: 6rem 1rem; /* Adjust padding for tablets */
+                font-size: 1.6rem;
+            }
+        }
+        
+        /* For large screens (desktops) */
+        @media (min-width: 1025px) {
+            .timeline {
+                padding: 6.5rem 1rem; /* Default or increased padding for larger screens */
+                font-size: 1.8rem;
+            }
+        }
+        
+    }
+
+    .scrollDown {
+        will-change: transform;
+        display: block;
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        bottom: 10px; // Adjusted spacing from the bottom
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center; // Center align the text
+    
+        svg {
+            width: 16px;
+            height: 24px;
+            fill: #fff;
+            animation: 2s ease-in-out scrollDownAnimate infinite;
+        }
+    
+        .scrollDownText {
+            margin-top: 8px; // Space between the arrow and text
+            font-size: 14px; // Adjust text size as needed
+            color: #fff; // White text color
+        }
+    }
+
+    @keyframes scrollDownAnimate {
+        60% {
+            transform: translateY(-8px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .scrollDown {
+            display: none;
+        }
+    }
+}
+
+.grain {
+    background: transparent url(../media/grain-new.gif) repeat;
+    opacity: .06;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.registerBtnContainer {
+  margin-top: 20px; // adjust as needed
+  text-align: center;
+}
+
+.registerBtn {
+  padding: 10px 20px;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.registerBtn:hover {
+  background-color: #e65a00; // hover effect for button
+}

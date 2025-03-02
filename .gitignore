@@ -1,0 +1,69 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+/test
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+test/
+# /src/fonts  # Comment this out to include fonts
+*.zip
+config-prod.js
+
+# Media files
+src/media/*.mp4
+src/media/*.png
+src/media/*.jpg
+src/media/*.jpeg
+public/media/**/*
+
+# Exclude all media except optimized folder
+/src/media/*
+!/src/media/optimized/
+!/src/media/icons/
+
+# Large media files
+*.mp4
+*.mov
+*.avi
+*.wmv
+*.flv
+*.mkv
+*.webm
+*.m4v
+*.mpeg
+*.mpg
+*.mp3
+*.wav
+*.flac
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.webp
+
+# Keep specific optimized files
+!src/media/optimized/*.mp4
+!src/media/optimized/*.png
+!src/media/optimized/*.jpg
+!src/media/icons/*.svg
